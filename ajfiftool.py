@@ -122,7 +122,7 @@ def patch_command(args):
                         patch.seek(0, 2)
                         len = patch.tell()
                         patch.seek(0)
-                        fout.write(fin.read(len))
+                        fout.write(patch.read(len))
                 else:
                     # copy original data
                     print(f'write section {fin.tell()} to {fout.tell()}')
